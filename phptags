@@ -1,0 +1,9 @@
+#!/bin/bash
+COMMAND="ctags-exuberant --PHP-kinds=cidf --exclude=".git" --tag-relative=yes --totals=yes -h .php -R -f .ctags"
+
+$COMMAND
+if [ "$1" != "" ];
+then
+  $COMMAND --append $1
+fi
+
