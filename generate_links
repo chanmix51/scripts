@@ -1,5 +1,10 @@
 #!/bin/bash
 
+if [ ! -d ~/bin ];
+then
+  mkdir ~/bin
+fi
+
 for entry in *;
 do
   if [ "$entry" != "${0##*/}" ];
