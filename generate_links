@@ -1,0 +1,9 @@
+#!/bin/bash
+
+for entry in *;
+do
+  if [ "$entry" != "${0##*/}" ];
+  then
+    ln -sf $PWD/${entry} ~/bin/${entry}
+  fi
+done
